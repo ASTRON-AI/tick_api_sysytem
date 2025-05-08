@@ -1,0 +1,227 @@
+2025-05-08 14:51:34,990 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-08 14:51:35,967 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-08 14:51:36,022 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-08 14:53:52,928 - tw_stock_api - INFO - [tick_api.py:68] - TWStockTickService initialized with host=140.113.87.91, port=3000
+2025-05-08 14:53:52,929 - tw_stock_api - ERROR - [tick_api.py:784] - 獲取 WebSocket Tick 數據時發生錯誤: 找不到數據文件: E:\project\tick raw data\tw_orderbook_20240508.parquet
+2025-05-08 14:53:52,929 - tw_stock_api - ERROR - [tick_api.py:785] - 詳細錯誤信息:
+Traceback (most recent call last):
+  File "C:\Users\FinLab615_82\tw_stock_api\app\services\tick_api.py", line 693, in get_ws_tick_data
+    raise FileNotFoundError(f"找不到數據文件: {file_path}")
+FileNotFoundError: 找不到數據文件: E:\project\tick raw data\tw_orderbook_20240508.parquet
+2025-05-08 14:53:52,931 - tw_stock_api - ERROR - [websocket.py:135] - WebSocket連接錯誤: 找不到數據文件: E:\project\tick raw data\tw_orderbook_20240508.parquet
+2025-05-08 14:54:13,462 - tw_stock_api - ERROR - [tick_api.py:784] - 獲取 WebSocket Tick 數據時發生錯誤: 找不到數據文件: E:\project\tick raw data\tw_orderbook_20230426.parquet
+2025-05-08 14:54:13,462 - tw_stock_api - ERROR - [tick_api.py:785] - 詳細錯誤信息:
+Traceback (most recent call last):
+  File "C:\Users\FinLab615_82\tw_stock_api\app\services\tick_api.py", line 693, in get_ws_tick_data
+    raise FileNotFoundError(f"找不到數據文件: {file_path}")
+FileNotFoundError: 找不到數據文件: E:\project\tick raw data\tw_orderbook_20230426.parquet
+2025-05-08 14:54:13,463 - tw_stock_api - ERROR - [websocket.py:135] - WebSocket連接錯誤: 找不到數據文件: E:\project\tick raw data\tw_orderbook_20230426.parquet
+2025-05-08 14:54:26,733 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20200426.parquet
+2025-05-08 14:54:26,766 - tw_stock_api - ERROR - [tick_api.py:109] - JSON parse error: Expecting value: line 1 column 1 (char 0). Response preview: IO Error: No files found that match the pattern "E:\project\tick raw data\tw_orderbook_20200426.parq...
+2025-05-08 14:54:26,766 - tw_stock_api - ERROR - [tick_api.py:113] - Error during query execution: Expecting value: line 1 column 1 (char 0)
+2025-05-08 14:54:26,766 - tw_stock_api - ERROR - [tick_api.py:114] - Detailed error information:
+Traceback (most recent call last):
+  File "C:\Users\FinLab615_82\tw_stock_api\app\services\tick_api.py", line 104, in _execute_query
+    result = json.loads(response_text)
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2025-05-08 14:54:26,769 - tw_stock_api - ERROR - [tick_api.py:188] - Error processing file tw_orderbook_20200426.parquet: Expecting value: line 1 column 1 (char 0)
+2025-05-08 14:54:26,769 - tw_stock_api - WARNING - [tick_api.py:209] - No matching data found
+2025-05-08 14:54:47,365 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20230426.parquet
+2025-05-08 14:54:48,824 - tw_stock_api - INFO - [tick_api.py:184] - Retrieved 47493 records
+2025-05-08 14:54:50,823 - tw_stock_api - INFO - [tick_api.py:206] - Successfully retrieved a total of 47493 data records
+2025-05-08 14:55:21,871 - tw_stock_api - ERROR - [tick_api.py:784] - 獲取 WebSocket Tick 數據時發生錯誤: 找不到數據文件: E:\project\tick raw data\tw_orderbook_20230426.parquet
+2025-05-08 14:55:21,871 - tw_stock_api - ERROR - [tick_api.py:785] - 詳細錯誤信息:
+Traceback (most recent call last):
+  File "C:\Users\FinLab615_82\tw_stock_api\app\services\tick_api.py", line 693, in get_ws_tick_data
+    raise FileNotFoundError(f"找不到數據文件: {file_path}")
+FileNotFoundError: 找不到數據文件: E:\project\tick raw data\tw_orderbook_20230426.parquet
+2025-05-08 14:55:21,872 - tw_stock_api - ERROR - [websocket.py:135] - WebSocket連接錯誤: 找不到數據文件: E:\project\tick raw data\tw_orderbook_20230426.parquet
+2025-05-08 14:58:57,382 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-08 14:58:57,441 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-08 14:59:30,664 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-08 14:59:30,720 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-08 14:59:41,313 - tw_stock_api - INFO - [tick_api.py:68] - TWStockTickService initialized with host=140.113.87.91, port=3000
+2025-05-08 14:59:41,314 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20230426.parquet
+2025-05-08 14:59:42,689 - tw_stock_api - INFO - [tick_api.py:184] - Retrieved 47493 records
+2025-05-08 14:59:44,756 - tw_stock_api - INFO - [tick_api.py:206] - Successfully retrieved a total of 47493 data records
+2025-05-08 14:59:46,141 - tw_stock_api - INFO - [tick_api.py:722] - 成功獲取股票 2330 在日期 20230426 的 47493 條數據記錄
+2025-05-08 14:59:46,203 - tw_stock_api - INFO - [websocket.py:73] - 開始為股票 2330 在 20230426 的WebSocket流，總記錄數: 47493
+2025-05-08 15:00:01,189 - tw_stock_api - INFO - [websocket.py:91] - 已發送 1000/47493 條記錄 (2.11%), 速率: 66.73 條/秒
+2025-05-08 15:00:16,211 - tw_stock_api - INFO - [websocket.py:91] - 已發送 2000/47493 條記錄 (4.21%), 速率: 66.65 條/秒
+2025-05-08 15:00:31,267 - tw_stock_api - INFO - [websocket.py:91] - 已發送 3000/47493 條記錄 (6.32%), 速率: 66.57 條/秒
+2025-05-08 15:00:46,309 - tw_stock_api - INFO - [websocket.py:91] - 已發送 4000/47493 條記錄 (8.42%), 速率: 66.55 條/秒
+2025-05-08 15:01:01,401 - tw_stock_api - INFO - [websocket.py:91] - 已發送 5000/47493 條記錄 (10.53%), 速率: 66.49 條/秒
+2025-05-08 15:01:16,434 - tw_stock_api - INFO - [websocket.py:91] - 已發送 6000/47493 條記錄 (12.63%), 速率: 66.50 條/秒
+2025-05-08 15:01:31,474 - tw_stock_api - INFO - [websocket.py:91] - 已發送 7000/47493 條記錄 (14.74%), 速率: 66.50 條/秒
+2025-05-08 15:01:46,524 - tw_stock_api - INFO - [websocket.py:91] - 已發送 8000/47493 條記錄 (16.84%), 速率: 66.49 條/秒
+2025-05-08 15:02:01,615 - tw_stock_api - INFO - [websocket.py:91] - 已發送 9000/47493 條記錄 (18.95%), 速率: 66.46 條/秒
+2025-05-08 15:02:16,671 - tw_stock_api - INFO - [websocket.py:91] - 已發送 10000/47493 條記錄 (21.06%), 速率: 66.46 條/秒
+2025-05-08 15:02:31,721 - tw_stock_api - INFO - [websocket.py:91] - 已發送 11000/47493 條記錄 (23.16%), 速率: 66.46 條/秒
+2025-05-08 15:02:46,777 - tw_stock_api - INFO - [websocket.py:91] - 已發送 12000/47493 條記錄 (25.27%), 速率: 66.46 條/秒
+2025-05-08 15:03:01,902 - tw_stock_api - INFO - [websocket.py:91] - 已發送 13000/47493 條記錄 (27.37%), 速率: 66.43 條/秒
+2025-05-08 15:03:16,987 - tw_stock_api - INFO - [websocket.py:91] - 已發送 14000/47493 條記錄 (29.48%), 速率: 66.42 條/秒
+2025-05-08 15:03:32,063 - tw_stock_api - INFO - [websocket.py:91] - 已發送 15000/47493 條記錄 (31.58%), 速率: 66.41 條/秒
+2025-05-08 15:03:47,143 - tw_stock_api - INFO - [websocket.py:91] - 已發送 16000/47493 條記錄 (33.69%), 速率: 66.41 條/秒
+2025-05-08 15:04:02,256 - tw_stock_api - INFO - [websocket.py:91] - 已發送 17000/47493 條記錄 (35.79%), 速率: 66.39 條/秒
+2025-05-08 15:04:17,305 - tw_stock_api - INFO - [websocket.py:91] - 已發送 18000/47493 條記錄 (37.90%), 速率: 66.40 條/秒
+2025-05-08 15:04:32,375 - tw_stock_api - INFO - [websocket.py:91] - 已發送 19000/47493 條記錄 (40.01%), 速率: 66.39 條/秒
+2025-05-08 15:04:47,437 - tw_stock_api - INFO - [websocket.py:91] - 已發送 20000/47493 條記錄 (42.11%), 速率: 66.39 條/秒
+2025-05-08 15:05:02,569 - tw_stock_api - INFO - [websocket.py:91] - 已發送 21000/47493 條記錄 (44.22%), 速率: 66.38 條/秒
+2025-05-08 15:05:17,632 - tw_stock_api - INFO - [websocket.py:91] - 已發送 22000/47493 條記錄 (46.32%), 速率: 66.38 條/秒
+2025-05-08 15:05:32,778 - tw_stock_api - INFO - [websocket.py:91] - 已發送 23000/47493 條記錄 (48.43%), 速率: 66.36 條/秒
+2025-05-08 15:05:47,874 - tw_stock_api - INFO - [websocket.py:91] - 已發送 24000/47493 條記錄 (50.53%), 速率: 66.36 條/秒
+2025-05-08 15:06:03,000 - tw_stock_api - INFO - [websocket.py:91] - 已發送 25000/47493 條記錄 (52.64%), 速率: 66.35 條/秒
+2025-05-08 15:06:18,068 - tw_stock_api - INFO - [websocket.py:91] - 已發送 26000/47493 條記錄 (54.74%), 速率: 66.35 條/秒
+2025-05-08 15:06:33,126 - tw_stock_api - INFO - [websocket.py:91] - 已發送 27000/47493 條記錄 (56.85%), 速率: 66.35 條/秒
+2025-05-08 15:06:48,205 - tw_stock_api - INFO - [websocket.py:91] - 已發送 28000/47493 條記錄 (58.96%), 速率: 66.35 條/秒
+2025-05-08 15:07:03,308 - tw_stock_api - INFO - [websocket.py:91] - 已發送 29000/47493 條記錄 (61.06%), 速率: 66.35 條/秒
+2025-05-08 15:07:18,367 - tw_stock_api - INFO - [websocket.py:91] - 已發送 30000/47493 條記錄 (63.17%), 速率: 66.35 條/秒
+2025-05-08 15:07:23,852 - tw_stock_api - INFO - [websocket.py:104] - 客戶端斷開連接，股票: 2330，日期: 20230426，進度: 30363/47493
+2025-05-08 15:07:23,853 - tw_stock_api - INFO - [websocket.py:114] - 完成WebSocket流，股票: 2330，日期: 20230426，總記錄數: 47493，用時: 457.65秒，速率: 103.78 條/秒
+2025-05-08 15:07:23,853 - tw_stock_api - ERROR - [websocket.py:127] - WebSocket連接錯誤: Cannot call "send" once a close message has been sent.
+2025-05-08 15:07:39,734 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20230426.parquet
+2025-05-08 15:07:41,109 - tw_stock_api - INFO - [tick_api.py:184] - Retrieved 47493 records
+2025-05-08 15:07:43,418 - tw_stock_api - INFO - [tick_api.py:206] - Successfully retrieved a total of 47493 data records
+2025-05-08 15:07:44,917 - tw_stock_api - INFO - [tick_api.py:722] - 成功獲取股票 2330 在日期 20230426 的 47493 條數據記錄
+2025-05-08 15:07:44,985 - tw_stock_api - INFO - [websocket.py:73] - 開始為股票 2330 在 20230426 的WebSocket流，總記錄數: 47493
+2025-05-08 15:07:47,069 - tw_stock_api - INFO - [websocket.py:104] - 客戶端斷開連接，股票: 2330，日期: 20230426，進度: 140/47493
+2025-05-08 15:07:47,069 - tw_stock_api - INFO - [websocket.py:114] - 完成WebSocket流，股票: 2330，日期: 20230426，總記錄數: 47493，用時: 2.08秒，速率: 22805.02 條/秒
+2025-05-08 15:07:47,070 - tw_stock_api - ERROR - [websocket.py:127] - WebSocket連接錯誤: Cannot call "send" once a close message has been sent.
+2025-05-08 15:13:19,203 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20230426.parquet
+2025-05-08 15:13:20,540 - tw_stock_api - INFO - [tick_api.py:184] - Retrieved 47493 records
+2025-05-08 15:13:22,777 - tw_stock_api - INFO - [tick_api.py:206] - Successfully retrieved a total of 47493 data records
+2025-05-08 15:13:24,317 - tw_stock_api - INFO - [tick_api.py:722] - 成功獲取股票 2330 在日期 20230426 的 47493 條數據記錄
+2025-05-08 15:13:24,369 - tw_stock_api - INFO - [websocket.py:73] - 開始為股票 2330 在 20230426 的WebSocket流，總記錄數: 47493
+2025-05-08 15:13:28,892 - tw_stock_api - INFO - [websocket.py:104] - 客戶端斷開連接，股票: 2330，日期: 20230426，進度: 302/47493
+2025-05-08 15:13:28,893 - tw_stock_api - INFO - [websocket.py:114] - 完成WebSocket流，股票: 2330，日期: 20230426，總記錄數: 47493，用時: 4.52秒，速率: 10505.18 條/秒
+2025-05-08 15:13:28,893 - tw_stock_api - ERROR - [websocket.py:127] - WebSocket連接錯誤: Cannot call "send" once a close message has been sent.
+2025-05-08 15:13:35,404 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20230426.parquet
+2025-05-08 15:13:36,731 - tw_stock_api - INFO - [tick_api.py:184] - Retrieved 47493 records
+2025-05-08 15:13:38,874 - tw_stock_api - INFO - [tick_api.py:206] - Successfully retrieved a total of 47493 data records
+2025-05-08 15:13:40,597 - tw_stock_api - INFO - [tick_api.py:722] - 成功獲取股票 2330 在日期 20230426 的 47493 條數據記錄
+2025-05-08 15:13:40,657 - tw_stock_api - INFO - [websocket.py:73] - 開始為股票 2330 在 20230426 的WebSocket流，總記錄數: 47493
+2025-05-08 15:13:55,733 - tw_stock_api - INFO - [websocket.py:91] - 已發送 1000/47493 條記錄 (2.11%), 速率: 66.34 條/秒
+2025-05-08 15:14:10,789 - tw_stock_api - INFO - [websocket.py:91] - 已發送 2000/47493 條記錄 (4.21%), 速率: 66.38 條/秒
+2025-05-08 15:14:25,844 - tw_stock_api - INFO - [websocket.py:91] - 已發送 3000/47493 條記錄 (6.32%), 速率: 66.39 條/秒
+2025-05-08 15:14:40,930 - tw_stock_api - INFO - [websocket.py:91] - 已發送 4000/47493 條記錄 (8.42%), 速率: 66.37 條/秒
+2025-05-08 15:14:56,008 - tw_stock_api - INFO - [websocket.py:91] - 已發送 5000/47493 條記錄 (10.53%), 速率: 66.36 條/秒
+2025-05-08 15:15:10,999 - tw_stock_api - INFO - [websocket.py:91] - 已發送 6000/47493 條記錄 (12.63%), 速率: 66.42 條/秒
+2025-05-08 15:15:26,048 - tw_stock_api - INFO - [websocket.py:91] - 已發送 7000/47493 條記錄 (14.74%), 速率: 66.42 條/秒
+2025-05-08 15:15:41,059 - tw_stock_api - INFO - [websocket.py:91] - 已發送 8000/47493 條記錄 (16.84%), 速率: 66.45 條/秒
+2025-05-08 15:15:56,108 - tw_stock_api - INFO - [websocket.py:91] - 已發送 9000/47493 條記錄 (18.95%), 速率: 66.45 條/秒
+2025-05-08 15:16:11,136 - tw_stock_api - INFO - [websocket.py:91] - 已發送 10000/47493 條記錄 (21.06%), 速率: 66.46 條/秒
+2025-05-08 15:16:26,218 - tw_stock_api - INFO - [websocket.py:91] - 已發送 11000/47493 條記錄 (23.16%), 速率: 66.44 條/秒
+2025-05-08 15:16:41,259 - tw_stock_api - INFO - [websocket.py:91] - 已發送 12000/47493 條記錄 (25.27%), 速率: 66.45 條/秒
+2025-05-08 15:16:56,338 - tw_stock_api - INFO - [websocket.py:91] - 已發送 13000/47493 條記錄 (27.37%), 速率: 66.44 條/秒
+2025-05-08 15:17:11,363 - tw_stock_api - INFO - [websocket.py:91] - 已發送 14000/47493 條記錄 (29.48%), 速率: 66.44 條/秒
+2025-05-08 15:17:26,452 - tw_stock_api - INFO - [websocket.py:91] - 已發送 15000/47493 條記錄 (31.58%), 速率: 66.43 條/秒
+2025-05-08 15:17:41,520 - tw_stock_api - INFO - [websocket.py:91] - 已發送 16000/47493 條記錄 (33.69%), 速率: 66.43 條/秒
+2025-05-08 15:17:56,620 - tw_stock_api - INFO - [websocket.py:91] - 已發送 17000/47493 條記錄 (35.79%), 速率: 66.42 條/秒
+2025-05-08 15:18:11,693 - tw_stock_api - INFO - [websocket.py:91] - 已發送 18000/47493 條記錄 (37.90%), 速率: 66.41 條/秒
+2025-05-08 15:18:26,740 - tw_stock_api - INFO - [websocket.py:91] - 已發送 19000/47493 條記錄 (40.01%), 速率: 66.41 條/秒
+2025-05-08 15:18:41,794 - tw_stock_api - INFO - [websocket.py:91] - 已發送 20000/47493 條記錄 (42.11%), 速率: 66.42 條/秒
+2025-05-08 15:18:56,828 - tw_stock_api - INFO - [websocket.py:91] - 已發送 21000/47493 條記錄 (44.22%), 速率: 66.42 條/秒
+2025-05-08 15:19:11,836 - tw_stock_api - INFO - [websocket.py:91] - 已發送 22000/47493 條記錄 (46.32%), 速率: 66.43 條/秒
+2025-05-08 15:19:26,895 - tw_stock_api - INFO - [websocket.py:91] - 已發送 23000/47493 條記錄 (48.43%), 速率: 66.43 條/秒
+2025-05-08 15:19:41,985 - tw_stock_api - INFO - [websocket.py:91] - 已發送 24000/47493 條記錄 (50.53%), 速率: 66.42 條/秒
+2025-05-08 15:19:57,084 - tw_stock_api - INFO - [websocket.py:91] - 已發送 25000/47493 條記錄 (52.64%), 速率: 66.41 條/秒
+2025-05-08 15:20:12,132 - tw_stock_api - INFO - [websocket.py:91] - 已發送 26000/47493 條記錄 (54.74%), 速率: 66.42 條/秒
+2025-05-08 15:20:27,188 - tw_stock_api - INFO - [websocket.py:91] - 已發送 27000/47493 條記錄 (56.85%), 速率: 66.42 條/秒
+2025-05-08 15:20:42,257 - tw_stock_api - INFO - [websocket.py:91] - 已發送 28000/47493 條記錄 (58.96%), 速率: 66.41 條/秒
+2025-05-08 15:20:57,346 - tw_stock_api - INFO - [websocket.py:91] - 已發送 29000/47493 條記錄 (61.06%), 速率: 66.41 條/秒
+2025-05-08 15:21:12,412 - tw_stock_api - INFO - [websocket.py:91] - 已發送 30000/47493 條記錄 (63.17%), 速率: 66.41 條/秒
+2025-05-08 15:21:27,470 - tw_stock_api - INFO - [websocket.py:91] - 已發送 31000/47493 條記錄 (65.27%), 速率: 66.41 條/秒
+2025-05-08 15:21:42,508 - tw_stock_api - INFO - [websocket.py:91] - 已發送 32000/47493 條記錄 (67.38%), 速率: 66.41 條/秒
+2025-05-08 15:21:57,589 - tw_stock_api - INFO - [websocket.py:91] - 已發送 33000/47493 條記錄 (69.48%), 速率: 66.41 條/秒
+2025-05-08 15:22:12,639 - tw_stock_api - INFO - [websocket.py:91] - 已發送 34000/47493 條記錄 (71.59%), 速率: 66.41 條/秒
+2025-05-08 15:22:27,731 - tw_stock_api - INFO - [websocket.py:91] - 已發送 35000/47493 條記錄 (73.70%), 速率: 66.40 條/秒
+2025-05-08 15:22:42,802 - tw_stock_api - INFO - [websocket.py:91] - 已發送 36000/47493 條記錄 (75.80%), 速率: 66.40 條/秒
+2025-05-08 15:22:57,907 - tw_stock_api - INFO - [websocket.py:91] - 已發送 37000/47493 條記錄 (77.91%), 速率: 66.40 條/秒
+2025-05-08 15:23:12,960 - tw_stock_api - INFO - [websocket.py:91] - 已發送 38000/47493 條記錄 (80.01%), 速率: 66.40 條/秒
+2025-05-08 15:23:28,016 - tw_stock_api - INFO - [websocket.py:91] - 已發送 39000/47493 條記錄 (82.12%), 速率: 66.40 條/秒
+2025-05-08 15:23:43,080 - tw_stock_api - INFO - [websocket.py:91] - 已發送 40000/47493 條記錄 (84.22%), 速率: 66.40 條/秒
+2025-05-08 15:23:58,164 - tw_stock_api - INFO - [websocket.py:91] - 已發送 41000/47493 條記錄 (86.33%), 速率: 66.40 條/秒
+2025-05-08 15:24:13,219 - tw_stock_api - INFO - [websocket.py:91] - 已發送 42000/47493 條記錄 (88.43%), 速率: 66.40 條/秒
+2025-05-08 15:24:28,280 - tw_stock_api - INFO - [websocket.py:91] - 已發送 43000/47493 條記錄 (90.54%), 速率: 66.40 條/秒
+2025-05-08 15:24:43,328 - tw_stock_api - INFO - [websocket.py:91] - 已發送 44000/47493 條記錄 (92.65%), 速率: 66.40 條/秒
+2025-05-08 15:24:58,448 - tw_stock_api - INFO - [websocket.py:91] - 已發送 45000/47493 條記錄 (94.75%), 速率: 66.39 條/秒
+2025-05-08 15:25:13,502 - tw_stock_api - INFO - [websocket.py:91] - 已發送 46000/47493 條記錄 (96.86%), 速率: 66.39 條/秒
+2025-05-08 15:25:28,533 - tw_stock_api - INFO - [websocket.py:91] - 已發送 47000/47493 條記錄 (98.96%), 速率: 66.40 條/秒
+2025-05-08 15:25:35,959 - tw_stock_api - INFO - [websocket.py:91] - 已發送 47493/47493 條記錄 (100.00%), 速率: 66.40 條/秒
+2025-05-08 15:25:35,975 - tw_stock_api - INFO - [websocket.py:114] - 完成WebSocket流，股票: 2330，日期: 20230426，總記錄數: 47493，用時: 715.32秒，速率: 66.39 條/秒
+2025-05-08 15:50:20,786 - tw_stock_api - ERROR - [tick_api.py:726] - 獲取 WebSocket Tick 數據時發生錯誤: 無效的股票代碼格式: 03011P, 必須是數字
+2025-05-08 15:50:20,786 - tw_stock_api - ERROR - [tick_api.py:727] - 詳細錯誤信息:
+Traceback (most recent call last):
+  File "C:\Users\FinLab615_82\tw_stock_api\app\services\tick_api.py", line 684, in get_ws_tick_data
+    raise ValueError(f"無效的股票代碼格式: {stock_id}, 必須是數字")
+ValueError: 無效的股票代碼格式: 03011P, 必須是數字
+2025-05-08 15:50:20,802 - tw_stock_api - ERROR - [websocket.py:127] - WebSocket連接錯誤: 無效的股票代碼格式: 03011P, 必須是數字
+2025-05-08 15:50:30,503 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20230426.parquet
+2025-05-08 15:50:31,095 - tw_stock_api - INFO - [tick_api.py:186] - No matching data in file tw_orderbook_20230426.parquet
+2025-05-08 15:50:31,096 - tw_stock_api - WARNING - [tick_api.py:209] - No matching data found
+2025-05-08 15:50:31,097 - tw_stock_api - WARNING - [tick_api.py:698] - 沒有找到股票 03011 在日期 20230426 的數據
+2025-05-08 15:51:28,955 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20230426.parquet
+2025-05-08 15:51:29,544 - tw_stock_api - INFO - [tick_api.py:186] - No matching data in file tw_orderbook_20230426.parquet
+2025-05-08 15:51:29,545 - tw_stock_api - WARNING - [tick_api.py:209] - No matching data found
+2025-05-08 15:51:29,545 - tw_stock_api - WARNING - [tick_api.py:698] - 沒有找到股票 060985 在日期 20230426 的數據
+2025-05-08 15:51:39,065 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20230426.parquet
+2025-05-08 15:51:39,620 - tw_stock_api - INFO - [tick_api.py:186] - No matching data in file tw_orderbook_20230426.parquet
+2025-05-08 15:51:39,621 - tw_stock_api - WARNING - [tick_api.py:209] - No matching data found
+2025-05-08 15:51:39,622 - tw_stock_api - WARNING - [tick_api.py:698] - 沒有找到股票 60985 在日期 20230426 的數據
+2025-05-08 16:07:39,936 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-08 16:07:41,163 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-08 16:07:41,213 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-08 16:08:02,250 - tw_stock_api - INFO - [tick_api.py:68] - TWStockTickService initialized with host=140.113.87.91, port=3000
+2025-05-08 16:08:02,251 - tw_stock_api - ERROR - [tick_api.py:213] - Unexpected error while retrieving tick data: Invalid stock ID format: 00631L, must be numeric
+2025-05-08 16:08:02,251 - tw_stock_api - ERROR - [tick_api.py:214] - Detailed error information:
+Traceback (most recent call last):
+  File "C:\Users\FinLab615_82\tw_stock_api\app\services\tick_api.py", line 152, in get_tick_data
+    raise ValueError(f"Invalid stock ID format: {stock_id}, must be numeric")
+ValueError: Invalid stock ID format: 00631L, must be numeric
+2025-05-08 16:13:07,312 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-08 16:13:07,362 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-08 16:13:37,604 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-08 16:13:37,674 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-08 16:14:25,223 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-08 16:14:25,276 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-08 16:15:03,000 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-08 16:15:03,069 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-08 16:15:30,535 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-08 16:15:30,590 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-08 16:15:34,737 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-08 16:15:34,785 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-08 16:16:10,052 - tw_stock_api - INFO - [tick_api.py:68] - TWStockTickService initialized with host=140.113.87.91, port=3000
+2025-05-08 16:16:10,053 - tw_stock_api - INFO - [tick_api.py:180] - Querying file: tw_orderbook_20230426.parquet
+2025-05-08 16:16:11,413 - tw_stock_api - INFO - [tick_api.py:185] - Retrieved 41310 records
+2025-05-08 16:16:13,479 - tw_stock_api - INFO - [tick_api.py:207] - Successfully retrieved a total of 41310 data records
+2025-05-08 16:16:42,324 - tw_stock_api - INFO - [tick_api.py:180] - Querying file: tw_orderbook_20230426.parquet
+2025-05-08 16:16:42,899 - tw_stock_api - INFO - [tick_api.py:187] - No matching data in file tw_orderbook_20230426.parquet
+2025-05-08 16:16:42,900 - tw_stock_api - WARNING - [tick_api.py:210] - No matching data found
+2025-05-08 16:18:05,992 - tw_stock_api - INFO - [tick_api.py:180] - Querying file: tw_orderbook_20230726.parquet
+2025-05-08 16:18:06,800 - tw_stock_api - INFO - [tick_api.py:187] - No matching data in file tw_orderbook_20230726.parquet
+2025-05-08 16:18:06,801 - tw_stock_api - WARNING - [tick_api.py:210] - No matching data found
+2025-05-08 16:19:13,061 - tw_stock_api - INFO - [tick_api.py:180] - Querying file: tw_orderbook_20241214.parquet
+2025-05-08 16:19:13,087 - tw_stock_api - ERROR - [tick_api.py:109] - JSON parse error: Expecting value: line 1 column 1 (char 0). Response preview: IO Error: No files found that match the pattern "E:\project\tick raw data\tw_orderbook_20241214.parq...
+2025-05-08 16:19:13,088 - tw_stock_api - ERROR - [tick_api.py:113] - Error during query execution: Expecting value: line 1 column 1 (char 0)
+2025-05-08 16:19:13,088 - tw_stock_api - ERROR - [tick_api.py:114] - Detailed error information:
+Traceback (most recent call last):
+  File "C:\Users\FinLab615_82\tw_stock_api\app\services\tick_api.py", line 104, in _execute_query
+    result = json.loads(response_text)
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2025-05-08 16:19:13,092 - tw_stock_api - ERROR - [tick_api.py:189] - Error processing file tw_orderbook_20241214.parquet: Expecting value: line 1 column 1 (char 0)
+2025-05-08 16:19:13,093 - tw_stock_api - WARNING - [tick_api.py:210] - No matching data found
+2025-05-08 16:19:27,950 - tw_stock_api - INFO - [tick_api.py:180] - Querying file: tw_orderbook_20241213.parquet
+2025-05-08 16:19:28,919 - tw_stock_api - INFO - [tick_api.py:185] - Retrieved 226 records
+2025-05-08 16:19:28,932 - tw_stock_api - INFO - [tick_api.py:207] - Successfully retrieved a total of 226 data records

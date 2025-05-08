@@ -1,0 +1,279 @@
+2025-05-07 14:33:12,284 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 14:33:13,292 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 14:33:13,348 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 14:34:06,400 - tw_stock_api - INFO - [tick_api.py:68] - TWStockTickService initialized with host=140.113.87.91, port=3000
+2025-05-07 14:34:06,401 - tw_stock_api - INFO - [tick_api.py:271] - Requesting tick data for stock 2330 on 20230426
+2025-05-07 14:34:06,619 - tw_stock_api - ERROR - [tick_api.py:109] - JSON parse error: Expecting value: line 1 column 1 (char 0). Response preview: Binder Error: No function matches the given name and argument types 'substring(BIGINT, INTEGER_LITER...
+2025-05-07 14:34:06,620 - tw_stock_api - ERROR - [tick_api.py:113] - Error during query execution: Expecting value: line 1 column 1 (char 0)
+2025-05-07 14:34:06,621 - tw_stock_api - ERROR - [tick_api.py:114] - Detailed error information:
+Traceback (most recent call last):
+  File "C:\Users\FinLab615_82\tw_stock_api\app\services\tick_api.py", line 104, in _execute_query
+    result = json.loads(response_text)
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2025-05-07 14:34:06,624 - tw_stock_api - ERROR - [tick_api.py:295] - Unexpected error while retrieving tick data: Expecting value: line 1 column 1 (char 0)
+2025-05-07 14:34:06,624 - tw_stock_api - ERROR - [tick_api.py:296] - Detailed error information:
+Traceback (most recent call last):
+  File "C:\Users\FinLab615_82\tw_stock_api\app\services\tick_api.py", line 274, in get_tick_data_by_date
+    result = self._execute_query(sql)
+  File "C:\Users\FinLab615_82\tw_stock_api\app\services\tick_api.py", line 104, in _execute_query
+    result = json.loads(response_text)
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2025-05-07 14:34:17,506 - tw_stock_api - INFO - [tick_api.py:271] - Requesting tick data for stock 2330 on 20230426
+2025-05-07 14:34:17,693 - tw_stock_api - ERROR - [tick_api.py:109] - JSON parse error: Expecting value: line 1 column 1 (char 0). Response preview: Binder Error: No function matches the given name and argument types 'substring(BIGINT, INTEGER_LITER...
+2025-05-07 14:34:17,694 - tw_stock_api - ERROR - [tick_api.py:113] - Error during query execution: Expecting value: line 1 column 1 (char 0)
+2025-05-07 14:34:17,694 - tw_stock_api - ERROR - [tick_api.py:114] - Detailed error information:
+Traceback (most recent call last):
+  File "C:\Users\FinLab615_82\tw_stock_api\app\services\tick_api.py", line 104, in _execute_query
+    result = json.loads(response_text)
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2025-05-07 14:34:17,695 - tw_stock_api - ERROR - [tick_api.py:295] - Unexpected error while retrieving tick data: Expecting value: line 1 column 1 (char 0)
+2025-05-07 14:34:17,695 - tw_stock_api - ERROR - [tick_api.py:296] - Detailed error information:
+Traceback (most recent call last):
+  File "C:\Users\FinLab615_82\tw_stock_api\app\services\tick_api.py", line 274, in get_tick_data_by_date
+    result = self._execute_query(sql)
+  File "C:\Users\FinLab615_82\tw_stock_api\app\services\tick_api.py", line 104, in _execute_query
+    result = json.loads(response_text)
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2025-05-07 14:34:26,843 - tw_stock_api - ERROR - [tick_api.py:630] - Error retrieving stock list: [WinError 3] ╰参тぃ﹚隔畖: 'E:\\project\\tick raw data'
+2025-05-07 14:34:26,843 - tw_stock_api - ERROR - [tick_api.py:631] - Detailed error information:
+Traceback (most recent call last):
+  File "C:\Users\FinLab615_82\tw_stock_api\app\services\tick_api.py", line 607, in get_stock_list
+    files = [f for f in os.listdir(self.data_root) if f.startswith('tw_orderbook_') and f.endswith('.parquet')]
+FileNotFoundError: [WinError 3] ╰参тぃ﹚隔畖: 'E:\\project\\tick raw data'
+2025-05-07 14:34:26,844 - tw_stock_api - ERROR - [tick_data.py:68] - Error retrieving stock list: [WinError 3] ╰参тぃ﹚隔畖: 'E:\\project\\tick raw data'
+2025-05-07 14:38:35,164 - tw_stock_api - INFO - [tick_api.py:271] - Requesting tick data for stock 2330 on 20230426
+2025-05-07 14:38:35,336 - tw_stock_api - ERROR - [tick_api.py:109] - JSON parse error: Expecting value: line 1 column 1 (char 0). Response preview: Binder Error: No function matches the given name and argument types 'substring(BIGINT, INTEGER_LITER...
+2025-05-07 14:38:35,337 - tw_stock_api - ERROR - [tick_api.py:113] - Error during query execution: Expecting value: line 1 column 1 (char 0)
+2025-05-07 14:38:35,337 - tw_stock_api - ERROR - [tick_api.py:114] - Detailed error information:
+Traceback (most recent call last):
+  File "C:\Users\FinLab615_82\tw_stock_api\app\services\tick_api.py", line 104, in _execute_query
+    result = json.loads(response_text)
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2025-05-07 14:38:35,339 - tw_stock_api - ERROR - [tick_api.py:295] - Unexpected error while retrieving tick data: Expecting value: line 1 column 1 (char 0)
+2025-05-07 14:38:35,339 - tw_stock_api - ERROR - [tick_api.py:296] - Detailed error information:
+Traceback (most recent call last):
+  File "C:\Users\FinLab615_82\tw_stock_api\app\services\tick_api.py", line 274, in get_tick_data_by_date
+    result = self._execute_query(sql)
+  File "C:\Users\FinLab615_82\tw_stock_api\app\services\tick_api.py", line 104, in _execute_query
+    result = json.loads(response_text)
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2025-05-07 14:38:37,422 - tw_stock_api - ERROR - [tick_api.py:109] - JSON parse error: Expecting value: line 1 column 1 (char 0). Response preview: IO Error: No files found that match the pattern "E:\project\tick raw data\tw_orderbook_20250507.parq...
+2025-05-07 14:38:37,422 - tw_stock_api - ERROR - [tick_api.py:113] - Error during query execution: Expecting value: line 1 column 1 (char 0)
+2025-05-07 14:38:37,423 - tw_stock_api - ERROR - [tick_api.py:114] - Detailed error information:
+Traceback (most recent call last):
+  File "C:\Users\FinLab615_82\tw_stock_api\app\services\tick_api.py", line 104, in _execute_query
+    result = json.loads(response_text)
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2025-05-07 14:38:37,424 - tw_stock_api - ERROR - [tick_api.py:581] - Error retrieving latest tick data: Expecting value: line 1 column 1 (char 0)
+2025-05-07 14:38:37,424 - tw_stock_api - ERROR - [tick_api.py:582] - Detailed error information:
+Traceback (most recent call last):
+  File "C:\Users\FinLab615_82\tw_stock_api\app\services\tick_api.py", line 541, in get_latest_tick
+    result = self._execute_query(sql)
+  File "C:\Users\FinLab615_82\tw_stock_api\app\services\tick_api.py", line 104, in _execute_query
+    result = json.loads(response_text)
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2025-05-07 14:44:47,491 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 14:44:47,541 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 14:44:51,999 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 14:44:52,969 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 14:44:53,017 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 14:45:03,258 - tw_stock_api - INFO - [tick_api.py:68] - TWStockTickService initialized with host=140.113.87.91, port=3000
+2025-05-07 14:45:03,259 - tw_stock_api - INFO - [tick_api.py:271] - Requesting tick data for stock 2330 on 20230426
+2025-05-07 14:45:03,423 - tw_stock_api - ERROR - [tick_api.py:109] - JSON parse error: Expecting value: line 1 column 1 (char 0). Response preview: Binder Error: No function matches the given name and argument types 'substring(BIGINT, INTEGER_LITER...
+2025-05-07 14:45:03,423 - tw_stock_api - ERROR - [tick_api.py:113] - Error during query execution: Expecting value: line 1 column 1 (char 0)
+2025-05-07 14:45:03,424 - tw_stock_api - ERROR - [tick_api.py:114] - Detailed error information:
+Traceback (most recent call last):
+  File "C:\Users\FinLab615_82\tw_stock_api\app\services\tick_api.py", line 104, in _execute_query
+    result = json.loads(response_text)
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2025-05-07 14:45:03,427 - tw_stock_api - ERROR - [tick_api.py:295] - Unexpected error while retrieving tick data: Expecting value: line 1 column 1 (char 0)
+2025-05-07 14:45:03,427 - tw_stock_api - ERROR - [tick_api.py:296] - Detailed error information:
+Traceback (most recent call last):
+  File "C:\Users\FinLab615_82\tw_stock_api\app\services\tick_api.py", line 274, in get_tick_data_by_date
+    result = self._execute_query(sql)
+  File "C:\Users\FinLab615_82\tw_stock_api\app\services\tick_api.py", line 104, in _execute_query
+    result = json.loads(response_text)
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2025-05-07 14:48:18,719 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 14:48:18,771 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 14:49:29,699 - tw_stock_api - INFO - [tick_api.py:68] - TWStockTickService initialized with host=140.113.87.91, port=3000
+2025-05-07 14:49:29,700 - tw_stock_api - ERROR - [tick_data.py:78] - 莉布 2330 ら戳 20230426  tick 戈祇ネ岿粇: 'TWStockTickService' object has no attribute 'get_tick_data_single_query'
+2025-05-07 14:51:47,688 - tw_stock_api - ERROR - [tick_data.py:78] - 莉布 2330 ら戳 20230426  tick 戈祇ネ岿粇: 'TWStockTickService' object has no attribute 'get_tick_data_single_query'
+2025-05-07 14:54:22,506 - tw_stock_api - ERROR - [tick_data.py:78] - 莉布 2330 ら戳 20230426  tick 戈祇ネ岿粇: 'TWStockTickService' object has no attribute 'get_tick_data_single_query'
+2025-05-07 14:55:42,253 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 14:55:42,299 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 14:55:53,431 - tw_stock_api - INFO - [tick_api.py:68] - TWStockTickService initialized with host=140.113.87.91, port=3000
+2025-05-07 14:55:53,433 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20230426.parquet
+2025-05-07 14:55:54,717 - tw_stock_api - INFO - [tick_api.py:184] - Retrieved 47493 records
+2025-05-07 14:55:56,759 - tw_stock_api - INFO - [tick_api.py:206] - Successfully retrieved a total of 47493 data records
+2025-05-07 15:01:32,481 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 15:01:32,535 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 15:01:52,542 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 15:01:52,601 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 15:02:15,947 - tw_stock_api - INFO - [tick_api.py:68] - TWStockTickService initialized with host=140.113.87.91, port=3000
+2025-05-07 15:02:15,948 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20230426.parquet
+2025-05-07 15:02:17,268 - tw_stock_api - INFO - [tick_api.py:184] - Retrieved 47493 records
+2025-05-07 15:02:19,525 - tw_stock_api - INFO - [tick_api.py:206] - Successfully retrieved a total of 47493 data records
+2025-05-07 15:04:27,646 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 15:04:27,704 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 15:04:49,569 - tw_stock_api - INFO - [tick_api.py:68] - TWStockTickService initialized with host=140.113.87.91, port=3000
+2025-05-07 15:04:49,570 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20230426.parquet
+2025-05-07 15:04:50,913 - tw_stock_api - INFO - [tick_api.py:184] - Retrieved 47493 records
+2025-05-07 15:04:53,056 - tw_stock_api - INFO - [tick_api.py:206] - Successfully retrieved a total of 47493 data records
+2025-05-07 15:04:53,841 - tw_stock_api - ERROR - [tick_data.py:113] - 莉布 2330 ら戳 20230426  tick 戈祇ネ岿粇: Object of type Decimal is not JSON serializable
+2025-05-07 15:07:01,101 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 15:07:01,155 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 15:07:09,749 - tw_stock_api - INFO - [tick_api.py:68] - TWStockTickService initialized with host=140.113.87.91, port=3000
+2025-05-07 15:07:09,750 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20230426.parquet
+2025-05-07 15:07:11,071 - tw_stock_api - INFO - [tick_api.py:184] - Retrieved 47493 records
+2025-05-07 15:07:13,149 - tw_stock_api - INFO - [tick_api.py:206] - Successfully retrieved a total of 47493 data records
+2025-05-07 15:08:34,898 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 15:08:34,954 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 15:09:33,565 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 15:09:33,610 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 15:09:38,437 - tw_stock_api - INFO - [tick_api.py:68] - TWStockTickService initialized with host=140.113.87.91, port=3000
+2025-05-07 15:09:38,438 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20230426.parquet
+2025-05-07 15:09:39,938 - tw_stock_api - INFO - [tick_api.py:184] - Retrieved 47493 records
+2025-05-07 15:09:42,279 - tw_stock_api - INFO - [tick_api.py:206] - Successfully retrieved a total of 47493 data records
+2025-05-07 15:15:11,448 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 15:15:11,506 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 15:15:47,888 - tw_stock_api - INFO - [tick_api.py:68] - TWStockTickService initialized with host=140.113.87.91, port=3000
+2025-05-07 15:15:47,889 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20230426.parquet
+2025-05-07 15:15:49,234 - tw_stock_api - INFO - [tick_api.py:184] - Retrieved 47493 records
+2025-05-07 15:15:51,457 - tw_stock_api - INFO - [tick_api.py:206] - Successfully retrieved a total of 47493 data records
+2025-05-07 15:15:51,886 - tw_stock_api - ERROR - [price_utils.py:92] - Error processing price column bp_best_1: could not convert string to float: ''
+2025-05-07 15:15:51,888 - tw_stock_api - ERROR - [price_utils.py:92] - Error processing price column bp_best_2: could not convert string to float: ''
+2025-05-07 15:15:51,890 - tw_stock_api - ERROR - [price_utils.py:92] - Error processing price column bp_best_3: could not convert string to float: ''
+2025-05-07 15:15:51,891 - tw_stock_api - ERROR - [price_utils.py:92] - Error processing price column bp_best_4: could not convert string to float: ''
+2025-05-07 15:15:51,892 - tw_stock_api - ERROR - [price_utils.py:92] - Error processing price column bp_best_5: could not convert string to float: ''
+2025-05-07 15:15:51,894 - tw_stock_api - ERROR - [price_utils.py:92] - Error processing price column sp_best_1: could not convert string to float: ''
+2025-05-07 15:15:51,896 - tw_stock_api - ERROR - [price_utils.py:92] - Error processing price column sp_best_2: could not convert string to float: ''
+2025-05-07 15:15:51,897 - tw_stock_api - ERROR - [price_utils.py:92] - Error processing price column sp_best_3: could not convert string to float: ''
+2025-05-07 15:15:51,899 - tw_stock_api - ERROR - [price_utils.py:92] - Error processing price column sp_best_4: could not convert string to float: ''
+2025-05-07 15:15:51,901 - tw_stock_api - ERROR - [price_utils.py:92] - Error processing price column sp_best_5: could not convert string to float: ''
+2025-05-07 15:15:52,031 - tw_stock_api - ERROR - [price_utils.py:131] - Error processing volume column bv_best_1: invalid literal for int() with base 10: ''
+2025-05-07 15:15:52,032 - tw_stock_api - ERROR - [price_utils.py:131] - Error processing volume column bv_best_2: invalid literal for int() with base 10: ''
+2025-05-07 15:15:52,033 - tw_stock_api - ERROR - [price_utils.py:131] - Error processing volume column bv_best_3: invalid literal for int() with base 10: ''
+2025-05-07 15:15:52,034 - tw_stock_api - ERROR - [price_utils.py:131] - Error processing volume column bv_best_4: invalid literal for int() with base 10: ''
+2025-05-07 15:15:52,035 - tw_stock_api - ERROR - [price_utils.py:131] - Error processing volume column bv_best_5: invalid literal for int() with base 10: ''
+2025-05-07 15:15:52,035 - tw_stock_api - ERROR - [price_utils.py:131] - Error processing volume column sv_best_1: invalid literal for int() with base 10: ''
+2025-05-07 15:15:52,037 - tw_stock_api - ERROR - [price_utils.py:131] - Error processing volume column sv_best_2: invalid literal for int() with base 10: ''
+2025-05-07 15:15:52,038 - tw_stock_api - ERROR - [price_utils.py:131] - Error processing volume column sv_best_3: invalid literal for int() with base 10: ''
+2025-05-07 15:15:52,039 - tw_stock_api - ERROR - [price_utils.py:131] - Error processing volume column sv_best_4: invalid literal for int() with base 10: ''
+2025-05-07 15:15:52,040 - tw_stock_api - ERROR - [price_utils.py:131] - Error processing volume column sv_best_5: invalid literal for int() with base 10: ''
+2025-05-07 15:18:25,952 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 15:18:26,003 - tw_stock_api - INFO - [logging_config.py:50] - ら粁╰参﹍て
+2025-05-07 15:18:36,139 - tw_stock_api - INFO - [tick_api.py:68] - TWStockTickService initialized with host=140.113.87.91, port=3000
+2025-05-07 15:18:36,140 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20230426.parquet
+2025-05-07 15:18:37,554 - tw_stock_api - INFO - [tick_api.py:184] - Retrieved 47493 records
+2025-05-07 15:18:39,667 - tw_stock_api - INFO - [tick_api.py:206] - Successfully retrieved a total of 47493 data records
+2025-05-07 15:19:17,341 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20230426.parquet
+2025-05-07 15:19:18,663 - tw_stock_api - INFO - [tick_api.py:184] - Retrieved 47493 records
+2025-05-07 15:19:20,874 - tw_stock_api - INFO - [tick_api.py:206] - Successfully retrieved a total of 47493 data records
+2025-05-07 15:21:27,790 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20230426.parquet
+2025-05-07 15:21:29,156 - tw_stock_api - INFO - [tick_api.py:184] - Retrieved 47493 records
+2025-05-07 15:21:31,254 - tw_stock_api - INFO - [tick_api.py:206] - Successfully retrieved a total of 47493 data records
+2025-05-07 15:22:15,627 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20230426.parquet
+2025-05-07 15:22:16,990 - tw_stock_api - INFO - [tick_api.py:184] - Retrieved 47493 records
+2025-05-07 15:22:19,310 - tw_stock_api - INFO - [tick_api.py:206] - Successfully retrieved a total of 47493 data records
+2025-05-07 15:43:02,240 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20230424.parquet
+2025-05-07 15:43:03,321 - tw_stock_api - INFO - [tick_api.py:184] - Retrieved 31697 records
+2025-05-07 15:43:03,321 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20230425.parquet
+2025-05-07 15:43:04,942 - tw_stock_api - INFO - [tick_api.py:184] - Retrieved 47386 records
+2025-05-07 15:43:04,942 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20230426.parquet
+2025-05-07 15:43:06,297 - tw_stock_api - INFO - [tick_api.py:184] - Retrieved 47493 records
+2025-05-07 15:43:12,762 - tw_stock_api - INFO - [tick_api.py:206] - Successfully retrieved a total of 126576 data records
+2025-05-07 18:23:49,049 - tw_stock_api - INFO - [logging_config.py:66] - ら粁╰参﹍て
+2025-05-07 18:23:50,051 - tw_stock_api - INFO - [logging_config.py:66] - ら粁╰参﹍て
+2025-05-07 18:23:50,100 - tw_stock_api - INFO - [logging_config.py:66] - ら粁╰参﹍て
+2025-05-07 18:24:05,848 - tw_stock_api - INFO - [tick_api.py:68] - TWStockTickService initialized with host=140.113.87.91, port=3000
+2025-05-07 18:24:05,849 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20230424.parquet
+2025-05-07 18:24:06,830 - tw_stock_api - INFO - [tick_api.py:184] - Retrieved 31697 records
+2025-05-07 18:24:06,831 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20230425.parquet
+2025-05-07 18:24:08,190 - tw_stock_api - INFO - [tick_api.py:184] - Retrieved 47386 records
+2025-05-07 18:24:08,190 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20230426.parquet
+2025-05-07 18:24:09,531 - tw_stock_api - INFO - [tick_api.py:184] - Retrieved 47493 records
+2025-05-07 18:24:15,322 - tw_stock_api - INFO - [tick_api.py:206] - Successfully retrieved a total of 126576 data records
+2025-05-07 18:37:44,733 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20230424.parquet
+2025-05-07 18:37:45,729 - tw_stock_api - INFO - [tick_api.py:184] - Retrieved 31697 records
+2025-05-07 18:37:45,730 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20230425.parquet
+2025-05-07 18:37:47,116 - tw_stock_api - INFO - [tick_api.py:184] - Retrieved 47386 records
+2025-05-07 18:37:47,117 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20230426.parquet
+2025-05-07 18:37:48,379 - tw_stock_api - INFO - [tick_api.py:184] - Retrieved 47493 records
+2025-05-07 18:37:54,043 - tw_stock_api - INFO - [tick_api.py:206] - Successfully retrieved a total of 126576 data records
+2025-05-07 18:38:17,294 - tw_stock_api - INFO - [tick_api.py:179] - Querying file: tw_orderbook_20200426.parquet
+2025-05-07 18:38:17,323 - tw_stock_api - ERROR - [tick_api.py:109] - JSON parse error: Expecting value: line 1 column 1 (char 0). Response preview: IO Error: No files found that match the pattern "E:\project\tick raw data\tw_orderbook_20200426.parq...
+2025-05-07 18:38:17,323 - tw_stock_api - ERROR - [tick_api.py:113] - Error during query execution: Expecting value: line 1 column 1 (char 0)
+2025-05-07 18:38:17,324 - tw_stock_api - ERROR - [tick_api.py:114] - Detailed error information:
+Traceback (most recent call last):
+  File "C:\Users\FinLab615_82\tw_stock_api\app\services\tick_api.py", line 104, in _execute_query
+    result = json.loads(response_text)
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\FinLab615_82\anaconda3\envs\tickapi\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2025-05-07 18:38:17,343 - tw_stock_api - ERROR - [tick_api.py:188] - Error processing file tw_orderbook_20200426.parquet: Expecting value: line 1 column 1 (char 0)
+2025-05-07 18:38:17,343 - tw_stock_api - WARNING - [tick_api.py:209] - No matching data found
