@@ -9,13 +9,13 @@ import logging
 import pandas as pd
 import numpy as np
 import json
-from datetime import datetime, date
+from datetime import datetime, date, timedelta
 import asyncio
 import time
 
 from app.services.tick_api import TWStockTickService
 from app.api.endpoints.tick_data import get_tick_service, convert_decimal, custom_process_price_columns, custom_process_volume_columns
-from app.services.utils.date_time_utils import format_date_to_yyyymmdd
+from app.services.utils.date_time_utils import format_date_to_yyyymmdd, format_display_time
 from app.core.config import settings
 
 # 創建 API 路由器
@@ -35,7 +35,8 @@ async def websocket_tick_data(
     websocket: WebSocket, 
     stock_id: str, 
     date: str,
-    tick_service: TWStockTickService = Depends(get_tick_service)
+    tick_service: TWStockTickService = Depends(get_tick_service),
+    scale_factor: float = 1.0  # 時間比例因子，可以加快或減慢模擬速度
 ):
     """
     WebSocket端點，用於訂閱特定股票和日期的Tick數據流
@@ -45,6 +46,7 @@ async def websocket_tick_data(
         stock_id: 股票代碼
         date: 日期 (YYYYMMDD, YYYY-MM-DD, 或 YYYY/MM/DD 格式)
         tick_service: TWStockTickService實例
+        scale_factor: 時間比例因子 (1.0為實時，小於1.0加快，大於1.0減慢)
     """
     await websocket.accept()
     
@@ -79,10 +81,62 @@ async def websocket_tick_data(
             "total_records": total_records
         })
         
-        # 每1毫秒發送一行數據
+        # 使用 display_time 作為傳送間隔的基準
         start_time = time.time()
+        last_time = None
+        
         for i, row in enumerate(data):
             try:
+                current_time = row.get('display_time')
+                
+                # 處理時間間隔
+                if i > 0 and current_time and last_time:
+                    # 解析時間字符串為時間對象
+                    try:
+                        # 檢查 display_time 格式
+                        if isinstance(current_time, str):
+                            if ':' in current_time:  # 格式如 "09:00:01.500"
+                                current_time_obj = datetime.strptime(current_time, "%H:%M:%S.%f" if '.' in current_time else "%H:%M:%S")
+                                last_time_obj = datetime.strptime(last_time, "%H:%M:%S.%f" if '.' in last_time else "%H:%M:%S")
+                            else:  # 格式如 "090001500"
+                                # 提取時、分、秒和毫秒（如果有）
+                                hours = int(current_time[:2])
+                                minutes = int(current_time[2:4])
+                                seconds = int(current_time[4:6])
+                                microseconds = int(current_time[6:]) * 1000 if len(current_time) > 6 else 0
+                                
+                                current_time_obj = datetime(1900, 1, 1, hours, minutes, seconds, microseconds)
+                                
+                                hours = int(last_time[:2])
+                                minutes = int(last_time[2:4])
+                                seconds = int(last_time[4:6])
+                                microseconds = int(last_time[6:]) * 1000 if len(last_time) > 6 else 0
+                                
+                                last_time_obj = datetime(1900, 1, 1, hours, minutes, seconds, microseconds)
+                        else:
+                            # 如果不是字符串，跳過時間間隔計算
+                            raise ValueError("display_time format not recognized")
+                            
+                        # 計算兩個時間點之間的差異（秒）
+                        time_diff = (current_time_obj - last_time_obj).total_seconds()
+                        
+                        # 應用比例因子調整時間
+                        sleep_time = time_diff * scale_factor
+                        
+                        # 限制最大等待時間為1秒，防止過長等待
+                        sleep_time = min(sleep_time, 1.0)
+                        
+                        # 只有在時間差為正數時才等待
+                        if sleep_time > 0:
+                            await asyncio.sleep(sleep_time)
+                    except (ValueError, TypeError) as e:
+                        # 如果時間解析失敗，使用最小延遲
+                        logger.warning(f"時間解析錯誤: {e} (記錄 {i+1}/{total_records})")
+                        await asyncio.sleep(0.001)
+                
+                # 記錄當前時間作為下一次比較的基準
+                last_time = current_time
+                
                 # 添加進度信息
                 if (i + 1) % 1000 == 0 or i == total_records - 1:
                     progress = (i + 1) / total_records * 100
@@ -98,7 +152,6 @@ async def websocket_tick_data(
                 }
                 
                 await websocket.send_json(row)
-                await asyncio.sleep(0.001)  # 等待1毫秒
                 
             except WebSocketDisconnect:
                 logger.info(f"客戶端斷開連接，股票: {stock_id}，日期: {date}，進度: {i+1}/{total_records}")
@@ -134,6 +187,32 @@ async def websocket_tick_data(
             if not active_connections[connection_id]:
                 del active_connections[connection_id]
         await websocket.close()
+
+
+@router.websocket("/ws/tick/{stock_id}/{date}/{scale}")
+async def websocket_tick_data_with_scale(
+    websocket: WebSocket, 
+    stock_id: str, 
+    date: str,
+    scale: float,
+    tick_service: TWStockTickService = Depends(get_tick_service)
+):
+    """
+    WebSocket端點，用於訂閱特定股票和日期的Tick數據流，並可調整時間比例
+    
+    參數:
+        websocket: WebSocket連接
+        stock_id: 股票代碼
+        date: 日期 (YYYYMMDD, YYYY-MM-DD, 或 YYYY/MM/DD 格式)
+        scale: 時間比例因子 (1.0為實時，小於1.0加快，大於1.0減慢)
+        tick_service: TWStockTickService實例
+    """
+    # 確保比例因子為正數
+    scale_factor = max(0.0001, float(scale))
+    
+    # 調用原始端點
+    await websocket_tick_data(websocket, stock_id, date, tick_service, scale_factor)
+        
         
 @router.websocket("/ws/heartbeat")
 async def websocket_heartbeat(websocket: WebSocket):

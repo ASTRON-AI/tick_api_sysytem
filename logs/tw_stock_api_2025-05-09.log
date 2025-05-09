@@ -1,0 +1,136 @@
+2025-05-09 08:28:39,490 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-09 08:28:40,611 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-09 08:28:40,674 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-09 08:38:58,048 - tw_stock_api - INFO - [tick_api.py:68] - TWStockTickService initialized with host=140.113.87.91, port=3000
+2025-05-09 08:38:58,049 - tw_stock_api - INFO - [tick_api.py:180] - Querying file: tw_orderbook_20240426.parquet
+2025-05-09 08:39:00,538 - tw_stock_api - INFO - [tick_api.py:185] - Retrieved 73576 records
+2025-05-09 08:39:04,930 - tw_stock_api - INFO - [tick_api.py:207] - Successfully retrieved a total of 73576 data records
+2025-05-09 08:39:07,918 - tw_stock_api - INFO - [tick_api.py:727] - 成功獲取股票 2330 在日期 20240426 的 73576 條數據記錄
+2025-05-09 08:39:08,004 - tw_stock_api - INFO - [websocket.py:73] - 開始為股票 2330 在 20240426 的WebSocket流，總記錄數: 73576
+2025-05-09 08:39:08,025 - tw_stock_api - INFO - [websocket.py:104] - 客戶端斷開連接，股票: 2330，日期: 20240426，進度: 3/73576
+2025-05-09 08:39:08,025 - tw_stock_api - INFO - [websocket.py:114] - 完成WebSocket流，股票: 2330，日期: 20240426，總記錄數: 73576，用時: 0.02秒，速率: 3882592.64 條/秒
+2025-05-09 08:39:08,026 - tw_stock_api - ERROR - [websocket.py:127] - WebSocket連接錯誤: Cannot call "send" once a close message has been sent.
+2025-05-09 08:39:45,433 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-09 08:39:46,402 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-09 08:39:46,451 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-09 08:39:58,773 - tw_stock_api - INFO - [tick_api.py:68] - TWStockTickService initialized with host=140.113.87.91, port=3000
+2025-05-09 08:39:58,775 - tw_stock_api - INFO - [tick_api.py:180] - Querying file: tw_orderbook_20240426.parquet
+2025-05-09 08:40:01,350 - tw_stock_api - INFO - [tick_api.py:185] - Retrieved 73576 records
+2025-05-09 08:40:05,648 - tw_stock_api - INFO - [tick_api.py:207] - Successfully retrieved a total of 73576 data records
+2025-05-09 08:40:08,144 - tw_stock_api - INFO - [tick_api.py:727] - 成功獲取股票 2330 在日期 20240426 的 73576 條數據記錄
+2025-05-09 08:40:08,230 - tw_stock_api - INFO - [websocket.py:73] - 開始為股票 2330 在 20240426 的WebSocket流，總記錄數: 73576
+2025-05-09 08:40:08,246 - tw_stock_api - INFO - [websocket.py:104] - 客戶端斷開連接，股票: 2330，日期: 20240426，進度: 3/73576
+2025-05-09 08:40:08,246 - tw_stock_api - INFO - [websocket.py:114] - 完成WebSocket流，股票: 2330，日期: 20240426，總記錄數: 73576，用時: 0.01秒，速率: 5269000.86 條/秒
+2025-05-09 08:40:08,247 - tw_stock_api - ERROR - [websocket.py:127] - WebSocket連接錯誤: Cannot call "send" once a close message has been sent.
+2025-05-09 09:12:13,223 - tw_stock_api - INFO - [tick_api.py:180] - Querying file: tw_orderbook_20240426.parquet
+2025-05-09 09:12:15,478 - tw_stock_api - INFO - [tick_api.py:185] - Retrieved 73576 records
+2025-05-09 09:12:19,883 - tw_stock_api - INFO - [tick_api.py:207] - Successfully retrieved a total of 73576 data records
+2025-05-09 09:12:22,505 - tw_stock_api - INFO - [tick_api.py:727] - 成功獲取股票 2330 在日期 20240426 的 73576 條數據記錄
+2025-05-09 09:12:22,620 - tw_stock_api - INFO - [websocket.py:73] - 開始為股票 2330 在 20240426 的WebSocket流，總記錄數: 73576
+2025-05-09 09:12:22,643 - tw_stock_api - INFO - [websocket.py:104] - 客戶端斷開連接，股票: 2330，日期: 20240426，進度: 3/73576
+2025-05-09 09:12:22,644 - tw_stock_api - INFO - [websocket.py:114] - 完成WebSocket流，股票: 2330，日期: 20240426，總記錄數: 73576，用時: 0.02秒，速率: 3356465.07 條/秒
+2025-05-09 09:12:22,644 - tw_stock_api - ERROR - [websocket.py:127] - WebSocket連接錯誤: Cannot call "send" once a close message has been sent.
+2025-05-09 09:21:44,984 - tw_stock_api - INFO - [tick_api.py:180] - Querying file: tw_orderbook_20240426.parquet
+2025-05-09 09:21:47,279 - tw_stock_api - INFO - [tick_api.py:185] - Retrieved 73576 records
+2025-05-09 09:21:50,950 - tw_stock_api - INFO - [tick_api.py:207] - Successfully retrieved a total of 73576 data records
+2025-05-09 09:21:53,304 - tw_stock_api - INFO - [tick_api.py:727] - 成功獲取股票 2330 在日期 20240426 的 73576 條數據記錄
+2025-05-09 09:21:53,394 - tw_stock_api - INFO - [websocket.py:73] - 開始為股票 2330 在 20240426 的WebSocket流，總記錄數: 73576
+2025-05-09 09:22:08,462 - tw_stock_api - INFO - [websocket.py:91] - 已發送 1000/73576 條記錄 (1.36%), 速率: 66.38 條/秒
+2025-05-09 09:22:18,912 - tw_stock_api - INFO - [websocket.py:104] - 客戶端斷開連接，股票: 2330，日期: 20240426，進度: 1696/73576
+2025-05-09 09:22:18,913 - tw_stock_api - INFO - [websocket.py:114] - 完成WebSocket流，股票: 2330，日期: 20240426，總記錄數: 73576，用時: 25.52秒，速率: 2883.54 條/秒
+2025-05-09 09:22:18,914 - tw_stock_api - ERROR - [websocket.py:127] - WebSocket連接錯誤: Cannot call "send" once a close message has been sent.
+2025-05-09 09:27:07,068 - tw_stock_api - INFO - [tick_api.py:180] - Querying file: tw_orderbook_20240426.parquet
+2025-05-09 09:27:09,307 - tw_stock_api - INFO - [tick_api.py:185] - Retrieved 73576 records
+2025-05-09 09:27:13,415 - tw_stock_api - INFO - [tick_api.py:207] - Successfully retrieved a total of 73576 data records
+2025-05-09 09:27:15,911 - tw_stock_api - INFO - [tick_api.py:727] - 成功獲取股票 2330 在日期 20240426 的 73576 條數據記錄
+2025-05-09 09:27:15,999 - tw_stock_api - INFO - [websocket.py:73] - 開始為股票 2330 在 20240426 的WebSocket流，總記錄數: 73576
+2025-05-09 09:27:31,057 - tw_stock_api - INFO - [websocket.py:91] - 已發送 1000/73576 條記錄 (1.36%), 速率: 66.42 條/秒
+2025-05-09 09:27:46,102 - tw_stock_api - INFO - [websocket.py:91] - 已發送 2000/73576 條記錄 (2.72%), 速率: 66.44 條/秒
+2025-05-09 09:28:01,145 - tw_stock_api - INFO - [websocket.py:91] - 已發送 3000/73576 條記錄 (4.08%), 速率: 66.46 條/秒
+2025-05-09 09:28:16,194 - tw_stock_api - INFO - [websocket.py:91] - 已發送 4000/73576 條記錄 (5.44%), 速率: 66.45 條/秒
+2025-05-09 09:28:31,309 - tw_stock_api - INFO - [websocket.py:91] - 已發送 5000/73576 條記錄 (6.80%), 速率: 66.39 條/秒
+2025-05-09 09:28:46,324 - tw_stock_api - INFO - [websocket.py:91] - 已發送 6000/73576 條記錄 (8.15%), 速率: 66.43 條/秒
+2025-05-09 09:29:01,370 - tw_stock_api - INFO - [websocket.py:91] - 已發送 7000/73576 條記錄 (9.51%), 速率: 66.43 條/秒
+2025-05-09 09:29:16,393 - tw_stock_api - INFO - [websocket.py:91] - 已發送 8000/73576 條記錄 (10.87%), 速率: 66.45 條/秒
+2025-05-09 09:29:24,470 - tw_stock_api - INFO - [websocket.py:104] - 客戶端斷開連接，股票: 2330，日期: 20240426，進度: 8536/73576
+2025-05-09 09:29:24,471 - tw_stock_api - INFO - [websocket.py:114] - 完成WebSocket流，股票: 2330，日期: 20240426，總記錄數: 73576，用時: 128.47秒，速率: 572.71 條/秒
+2025-05-09 09:29:24,471 - tw_stock_api - ERROR - [websocket.py:127] - WebSocket連接錯誤: Cannot call "send" once a close message has been sent.
+2025-05-09 09:29:31,124 - tw_stock_api - INFO - [tick_api.py:180] - Querying file: tw_orderbook_20230426.parquet
+2025-05-09 09:29:32,494 - tw_stock_api - INFO - [tick_api.py:185] - Retrieved 47493 records
+2025-05-09 09:29:34,751 - tw_stock_api - INFO - [tick_api.py:207] - Successfully retrieved a total of 47493 data records
+2025-05-09 09:29:36,361 - tw_stock_api - INFO - [tick_api.py:727] - 成功獲取股票 2330 在日期 20230426 的 47493 條數據記錄
+2025-05-09 09:29:36,410 - tw_stock_api - INFO - [websocket.py:73] - 開始為股票 2330 在 20230426 的WebSocket流，總記錄數: 47493
+2025-05-09 09:29:43,051 - tw_stock_api - INFO - [websocket.py:104] - 客戶端斷開連接，股票: 2330，日期: 20230426，進度: 441/47493
+2025-05-09 09:29:43,052 - tw_stock_api - INFO - [websocket.py:114] - 完成WebSocket流，股票: 2330，日期: 20230426，總記錄數: 47493，用時: 6.64秒，速率: 7153.16 條/秒
+2025-05-09 09:29:43,053 - tw_stock_api - ERROR - [websocket.py:127] - WebSocket連接錯誤: Cannot call "send" once a close message has been sent.
+2025-05-09 09:35:16,471 - tw_stock_api - INFO - [tick_api.py:180] - Querying file: tw_orderbook_20230426.parquet
+2025-05-09 09:35:17,910 - tw_stock_api - INFO - [tick_api.py:185] - Retrieved 47493 records
+2025-05-09 09:35:20,472 - tw_stock_api - INFO - [tick_api.py:207] - Successfully retrieved a total of 47493 data records
+2025-05-09 09:35:22,160 - tw_stock_api - INFO - [tick_api.py:727] - 成功獲取股票 2330 在日期 20230426 的 47493 條數據記錄
+2025-05-09 09:35:22,211 - tw_stock_api - INFO - [websocket.py:73] - 開始為股票 2330 在 20230426 的WebSocket流，總記錄數: 47493
+2025-05-09 09:35:37,288 - tw_stock_api - INFO - [websocket.py:91] - 已發送 1000/47493 條記錄 (2.11%), 速率: 66.33 條/秒
+2025-05-09 09:35:52,338 - tw_stock_api - INFO - [websocket.py:91] - 已發送 2000/47493 條記錄 (4.21%), 速率: 66.39 條/秒
+2025-05-09 09:36:07,401 - tw_stock_api - INFO - [websocket.py:91] - 已發送 3000/47493 條記錄 (6.32%), 速率: 66.39 條/秒
+2025-05-09 09:36:22,479 - tw_stock_api - INFO - [websocket.py:91] - 已發送 4000/47493 條記錄 (8.42%), 速率: 66.37 條/秒
+2025-05-09 09:36:37,496 - tw_stock_api - INFO - [websocket.py:91] - 已發送 5000/47493 條記錄 (10.53%), 速率: 66.42 條/秒
+2025-05-09 09:36:52,550 - tw_stock_api - INFO - [websocket.py:91] - 已發送 6000/47493 條記錄 (12.63%), 速率: 66.42 條/秒
+2025-05-09 09:37:07,578 - tw_stock_api - INFO - [websocket.py:91] - 已發送 7000/47493 條記錄 (14.74%), 速率: 66.44 條/秒
+2025-05-09 09:37:22,644 - tw_stock_api - INFO - [websocket.py:91] - 已發送 8000/47493 條記錄 (16.84%), 速率: 66.43 條/秒
+2025-05-09 09:37:37,728 - tw_stock_api - INFO - [websocket.py:91] - 已發送 9000/47493 條記錄 (18.95%), 速率: 66.41 條/秒
+2025-05-09 09:37:52,783 - tw_stock_api - INFO - [websocket.py:91] - 已發送 10000/47493 條記錄 (21.06%), 速率: 66.41 條/秒
+2025-05-09 09:38:07,840 - tw_stock_api - INFO - [websocket.py:91] - 已發送 11000/47493 條記錄 (23.16%), 速率: 66.41 條/秒
+2025-05-09 09:38:22,909 - tw_stock_api - INFO - [websocket.py:91] - 已發送 12000/47493 條記錄 (25.27%), 速率: 66.41 條/秒
+2025-05-09 09:38:38,017 - tw_stock_api - INFO - [websocket.py:91] - 已發送 13000/47493 條記錄 (27.37%), 速率: 66.39 條/秒
+2025-05-09 09:38:53,084 - tw_stock_api - INFO - [websocket.py:91] - 已發送 14000/47493 條記錄 (29.48%), 速率: 66.39 條/秒
+2025-05-09 09:39:08,139 - tw_stock_api - INFO - [websocket.py:91] - 已發送 15000/47493 條記錄 (31.58%), 速率: 66.39 條/秒
+2025-05-09 09:39:23,222 - tw_stock_api - INFO - [websocket.py:91] - 已發送 16000/47493 條記錄 (33.69%), 速率: 66.39 條/秒
+2025-05-09 09:39:38,325 - tw_stock_api - INFO - [websocket.py:91] - 已發送 17000/47493 條記錄 (35.79%), 速率: 66.38 條/秒
+2025-05-09 09:39:53,398 - tw_stock_api - INFO - [websocket.py:91] - 已發送 18000/47493 條記錄 (37.90%), 速率: 66.38 條/秒
+2025-05-09 09:40:08,443 - tw_stock_api - INFO - [websocket.py:91] - 已發送 19000/47493 條記錄 (40.01%), 速率: 66.38 條/秒
+2025-05-09 09:40:23,538 - tw_stock_api - INFO - [websocket.py:91] - 已發送 20000/47493 條記錄 (42.11%), 速率: 66.37 條/秒
+2025-05-09 09:40:38,613 - tw_stock_api - INFO - [websocket.py:91] - 已發送 21000/47493 條記錄 (44.22%), 速率: 66.37 條/秒
+2025-05-09 09:40:53,674 - tw_stock_api - INFO - [websocket.py:91] - 已發送 22000/47493 條記錄 (46.32%), 速率: 66.37 條/秒
+2025-05-09 09:41:08,676 - tw_stock_api - INFO - [websocket.py:91] - 已發送 23000/47493 條記錄 (48.43%), 速率: 66.39 條/秒
+2025-05-09 09:41:23,733 - tw_stock_api - INFO - [websocket.py:91] - 已發送 24000/47493 條記錄 (50.53%), 速率: 66.39 條/秒
+2025-05-09 09:41:38,840 - tw_stock_api - INFO - [websocket.py:91] - 已發送 25000/47493 條記錄 (52.64%), 速率: 66.38 條/秒
+2025-05-09 09:41:53,893 - tw_stock_api - INFO - [websocket.py:91] - 已發送 26000/47493 條記錄 (54.74%), 速率: 66.38 條/秒
+2025-05-09 09:42:08,936 - tw_stock_api - INFO - [websocket.py:91] - 已發送 27000/47493 條記錄 (56.85%), 速率: 66.38 條/秒
+2025-05-09 09:42:24,009 - tw_stock_api - INFO - [websocket.py:91] - 已發送 28000/47493 條記錄 (58.96%), 速率: 66.38 條/秒
+2025-05-09 09:42:39,082 - tw_stock_api - INFO - [websocket.py:91] - 已發送 29000/47493 條記錄 (61.06%), 速率: 66.38 條/秒
+2025-05-09 09:42:54,082 - tw_stock_api - INFO - [websocket.py:91] - 已發送 30000/47493 條記錄 (63.17%), 速率: 66.39 條/秒
+2025-05-09 09:43:09,103 - tw_stock_api - INFO - [websocket.py:91] - 已發送 31000/47493 條記錄 (65.27%), 速率: 66.40 條/秒
+2025-05-09 09:43:24,153 - tw_stock_api - INFO - [websocket.py:91] - 已發送 32000/47493 條記錄 (67.38%), 速率: 66.40 條/秒
+2025-05-09 09:43:39,225 - tw_stock_api - INFO - [websocket.py:91] - 已發送 33000/47493 條記錄 (69.48%), 速率: 66.40 條/秒
+2025-05-09 09:43:54,280 - tw_stock_api - INFO - [websocket.py:91] - 已發送 34000/47493 條記錄 (71.59%), 速率: 66.40 條/秒
+2025-05-09 09:44:09,316 - tw_stock_api - INFO - [websocket.py:91] - 已發送 35000/47493 條記錄 (73.70%), 速率: 66.40 條/秒
+2025-05-09 09:44:24,404 - tw_stock_api - INFO - [websocket.py:91] - 已發送 36000/47493 條記錄 (75.80%), 速率: 66.40 條/秒
+2025-05-09 09:44:39,482 - tw_stock_api - INFO - [websocket.py:91] - 已發送 37000/47493 條記錄 (77.91%), 速率: 66.40 條/秒
+2025-05-09 09:44:54,524 - tw_stock_api - INFO - [websocket.py:91] - 已發送 38000/47493 條記錄 (80.01%), 速率: 66.40 條/秒
+2025-05-09 09:45:09,530 - tw_stock_api - INFO - [websocket.py:91] - 已發送 39000/47493 條記錄 (82.12%), 速率: 66.40 條/秒
+2025-05-09 09:45:24,562 - tw_stock_api - INFO - [websocket.py:91] - 已發送 40000/47493 條記錄 (84.22%), 速率: 66.41 條/秒
+2025-05-09 09:45:39,660 - tw_stock_api - INFO - [websocket.py:91] - 已發送 41000/47493 條記錄 (86.33%), 速率: 66.40 條/秒
+2025-05-09 09:45:54,735 - tw_stock_api - INFO - [websocket.py:91] - 已發送 42000/47493 條記錄 (88.43%), 速率: 66.40 條/秒
+2025-05-09 09:46:09,783 - tw_stock_api - INFO - [websocket.py:91] - 已發送 43000/47493 條記錄 (90.54%), 速率: 66.40 條/秒
+2025-05-09 09:46:24,821 - tw_stock_api - INFO - [websocket.py:91] - 已發送 44000/47493 條記錄 (92.65%), 速率: 66.40 條/秒
+2025-05-09 09:46:39,927 - tw_stock_api - INFO - [websocket.py:91] - 已發送 45000/47493 條記錄 (94.75%), 速率: 66.40 條/秒
+2025-05-09 09:46:54,979 - tw_stock_api - INFO - [websocket.py:91] - 已發送 46000/47493 條記錄 (96.86%), 速率: 66.40 條/秒
+2025-05-09 09:47:10,009 - tw_stock_api - INFO - [websocket.py:91] - 已發送 47000/47493 條記錄 (98.96%), 速率: 66.40 條/秒
+2025-05-09 09:47:17,445 - tw_stock_api - INFO - [websocket.py:91] - 已發送 47493/47493 條記錄 (100.00%), 速率: 66.40 條/秒
+2025-05-09 09:47:17,460 - tw_stock_api - INFO - [websocket.py:114] - 完成WebSocket流，股票: 2330，日期: 20230426，總記錄數: 47493，用時: 715.25秒，速率: 66.40 條/秒
+2025-05-09 09:58:39,673 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-09 09:58:40,823 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-09 09:58:40,878 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-09 10:02:18,366 - tw_stock_api - INFO - [tick_api.py:68] - TWStockTickService initialized with host=140.113.87.91, port=3000
+2025-05-09 10:02:18,368 - tw_stock_api - INFO - [tick_api.py:180] - Querying file: tw_orderbook_20230426.parquet
+2025-05-09 10:02:19,859 - tw_stock_api - INFO - [tick_api.py:185] - Retrieved 47493 records
+2025-05-09 10:02:22,482 - tw_stock_api - INFO - [tick_api.py:207] - Successfully retrieved a total of 47493 data records
+2025-05-09 10:02:24,328 - tw_stock_api - INFO - [tick_api.py:727] - 成功獲取股票 2330 在日期 20230426 的 47493 條數據記錄
+2025-05-09 10:02:24,404 - tw_stock_api - INFO - [websocket.py:75] - 開始為股票 2330 在 20230426 的WebSocket流，總記錄數: 47493
+2025-05-09 10:08:47,690 - tw_stock_api - INFO - [websocket.py:145] - 已發送 1000/47493 條記錄 (2.11%), 速率: 2.61 條/秒
+2025-05-09 10:10:04,121 - tw_stock_api - INFO - [websocket.py:145] - 已發送 2000/47493 條記錄 (4.21%), 速率: 4.35 條/秒
+2025-05-09 10:11:15,810 - tw_stock_api - INFO - [websocket.py:145] - 已發送 3000/47493 條記錄 (6.32%), 速率: 5.65 條/秒
+2025-05-09 10:12:45,095 - tw_stock_api - INFO - [websocket.py:145] - 已發送 4000/47493 條記錄 (8.42%), 速率: 6.44 條/秒
+2025-05-09 10:13:49,358 - tw_stock_api - INFO - [websocket.py:145] - 已發送 5000/47493 條記錄 (10.53%), 速率: 7.30 條/秒
+2025-05-09 10:14:27,534 - tw_stock_api - INFO - [websocket.py:157] - 客戶端斷開連接，股票: 2330，日期: 20230426，進度: 5500/47493
+2025-05-09 10:14:27,535 - tw_stock_api - INFO - [websocket.py:167] - 完成WebSocket流，股票: 2330，日期: 20230426，總記錄數: 47493，用時: 723.13秒，速率: 65.68 條/秒
+2025-05-09 10:14:27,536 - tw_stock_api - ERROR - [websocket.py:180] - WebSocket連接錯誤: Cannot call "send" once a close message has been sent.
