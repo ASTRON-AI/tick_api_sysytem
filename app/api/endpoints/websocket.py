@@ -30,13 +30,60 @@ logger = logging.getLogger("tw_stock_api")
 active_connections: Dict[str, List[WebSocket]] = {}
 
 
+def calculate_trade_volume(data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """
+    計算每筆成交的單次成交量
+    根據累積成交量(acc_transaction_volume)計算每筆match_flag="Y"的單次成交量(trade_volume)
+    
+    參數:
+        data: 股票Tick資料列表
+        
+    返回:
+        處理後的股票Tick資料列表，包含單次成交量trade_volume欄位
+    """
+    if not data:
+        return data
+    
+    # 創建一份資料的複本，避免修改原始資料
+    result = data.copy()
+    
+    # 追蹤上一次成交的累積成交量
+    last_acc_volume = 0
+    
+    for i, row in enumerate(result):
+        # 檢查是否為成交記錄
+        is_match = row.get('match_flag') == 'Y'
+        
+        # 獲取當前累積成交量
+        current_acc_volume = row.get('acc_transaction_volume')
+        
+        # 如果是成交記錄且累積成交量存在
+        if is_match and current_acc_volume is not None:
+            # 計算單次成交量
+            if i == 0 or last_acc_volume == 0:
+                # 如果是第一筆記錄或前面沒有成交，使用當前累積成交量作為單次成交量
+                row['trade_volume'] = current_acc_volume
+            else:
+                # 計算增量成交量
+                row['trade_volume'] = current_acc_volume - last_acc_volume
+            
+            # 更新上一次成交量
+            last_acc_volume = current_acc_volume
+        else:
+            # 非成交記錄，設置單次成交量為0或null
+            row['trade_volume'] = 0
+    
+    return result
+
+
 @router.websocket("/ws/tick/{stock_id}/{date}")
 async def websocket_tick_data(
     websocket: WebSocket, 
     stock_id: str, 
     date: str,
     tick_service: TWStockTickService = Depends(get_tick_service),
-    scale_factor: float = 1.0  # 時間比例因子，可以加快或減慢模擬速度
+    scale_factor: float = 1.0,  # 時間比例因子，可以加快或減慢模擬速度
+    calculate_volumes: bool = True  # 是否計算單次成交量
 ):
     """
     WebSocket端點，用於訂閱特定股票和日期的Tick數據流
@@ -47,6 +94,7 @@ async def websocket_tick_data(
         date: 日期 (YYYYMMDD, YYYY-MM-DD, 或 YYYY/MM/DD 格式)
         tick_service: TWStockTickService實例
         scale_factor: 時間比例因子 (1.0為實時，小於1.0加快，大於1.0減慢)
+        calculate_volumes: 是否計算單次成交量 (預設為True)
     """
     await websocket.accept()
     
@@ -71,6 +119,10 @@ async def websocket_tick_data(
             await websocket.close()
             return
         
+        # 計算單次成交量
+        if calculate_volumes:
+            data = calculate_trade_volume(data)
+        
         total_records = len(data)
         logger.info(f"開始為股票 {stock_id} 在 {date} 的WebSocket流，總記錄數: {total_records}")
         
@@ -78,7 +130,8 @@ async def websocket_tick_data(
         await websocket.send_json({
             "type": "info", 
             "message": f"開始數據流，總記錄數: {total_records}", 
-            "total_records": total_records
+            "total_records": total_records,
+            "features": ["單次成交量計算"] if calculate_volumes else []
         })
         
         # 使用 display_time 作為傳送間隔的基準
@@ -195,7 +248,8 @@ async def websocket_tick_data_with_scale(
     stock_id: str, 
     date: str,
     scale: float,
-    tick_service: TWStockTickService = Depends(get_tick_service)
+    tick_service: TWStockTickService = Depends(get_tick_service),
+    calculate_volumes: bool = True
 ):
     """
     WebSocket端點，用於訂閱特定股票和日期的Tick數據流，並可調整時間比例
@@ -206,14 +260,45 @@ async def websocket_tick_data_with_scale(
         date: 日期 (YYYYMMDD, YYYY-MM-DD, 或 YYYY/MM/DD 格式)
         scale: 時間比例因子 (1.0為實時，小於1.0加快，大於1.0減慢)
         tick_service: TWStockTickService實例
+        calculate_volumes: 是否計算單次成交量 (預設為True)
     """
     # 確保比例因子為正數
     scale_factor = max(0.0001, float(scale))
     
     # 調用原始端點
-    await websocket_tick_data(websocket, stock_id, date, tick_service, scale_factor)
-        
-        
+    await websocket_tick_data(websocket, stock_id, date, tick_service, scale_factor, calculate_volumes)
+
+
+@router.websocket("/ws/tick/{stock_id}/{date}/{scale}/{calculate_vol}")
+async def websocket_tick_data_full_options(
+    websocket: WebSocket, 
+    stock_id: str, 
+    date: str,
+    scale: float,
+    calculate_vol: str,
+    tick_service: TWStockTickService = Depends(get_tick_service)
+):
+    """
+    WebSocket端點，用於訂閱特定股票和日期的Tick數據流，可調整時間比例和是否計算單次成交量
+    
+    參數:
+        websocket: WebSocket連接
+        stock_id: 股票代碼
+        date: 日期 (YYYYMMDD, YYYY-MM-DD, 或 YYYY/MM/DD 格式)
+        scale: 時間比例因子 (1.0為實時，小於1.0加快，大於1.0減慢)
+        calculate_vol: 是否計算單次成交量 ("true"或"false")
+        tick_service: TWStockTickService實例
+    """
+    # 確保比例因子為正數
+    scale_factor = max(0.0001, float(scale))
+    
+    # 解析是否計算單次成交量
+    calculate_volumes = calculate_vol.lower() in ["true", "1", "yes", "y"]
+    
+    # 調用原始端點
+    await websocket_tick_data(websocket, stock_id, date, tick_service, scale_factor, calculate_volumes)
+
+
 @router.websocket("/ws/heartbeat")
 async def websocket_heartbeat(websocket: WebSocket):
     """

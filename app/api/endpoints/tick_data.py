@@ -141,6 +141,63 @@ def custom_process_volume_columns(df, columns=None):
     
     return df
 
+def calculate_trade_volume(df):
+    """
+    計算每筆成交的單次成交量
+    根據累積成交量(acc_transaction_volume)計算每筆match_flag="Y"的單次成交量(trade_volume)
+    
+    參數:
+        df: 包含 Tick 數據的 DataFrame
+        
+    返回:
+        添加了 trade_volume 欄位的 DataFrame
+    """
+    if df.empty or 'acc_transaction_volume' not in df.columns:
+        return df
+    
+    # 創建一份數據的複本，避免修改原始數據
+    result_df = df.copy()
+    
+    # 確保有 match_flag 欄位
+    if 'match_flag' not in result_df.columns:
+        # 如果沒有 match_flag 欄位，假設所有記錄都是成交記錄
+        result_df['match_flag'] = 'Y'
+    
+    # 添加 trade_volume 欄位
+    result_df['trade_volume'] = 0
+    
+    # 只處理成交記錄
+    match_rows = result_df[result_df['match_flag'] == 'Y']
+    
+    if match_rows.empty:
+        return result_df
+    
+    # 將 DataFrame 排序，確保按時間順序處理
+    match_rows = match_rows.sort_values(by=['display_date', 'display_time'])
+    
+    # 初始化上一次成交的累積量
+    last_acc_volume = 0
+    
+    # 計算每筆交易的單次成交量
+    for idx, row in match_rows.iterrows():
+        current_acc_volume = row['acc_transaction_volume']
+        
+        # 跳過無效值
+        if pd.isna(current_acc_volume):
+            continue
+        
+        # 第一筆交易或上一次成交量為0
+        if last_acc_volume == 0:
+            result_df.at[idx, 'trade_volume'] = current_acc_volume
+        else:
+            # 計算差值作為單次成交量
+            result_df.at[idx, 'trade_volume'] = current_acc_volume - last_acc_volume
+        
+        # 更新上一次成交的累積量
+        last_acc_volume = current_acc_volume
+    
+    return result_df
+
 @router.get(
     "/{stock_id}/date/{date}",
     summary="取得特定日期的 tick 資料",
@@ -150,18 +207,20 @@ async def get_tick_data_by_date(
     stock_id: str,
     date: str,
     convert_formats: bool = Query(True, description="是否轉換資料格式（日期、時間、價格）"),
+    calculate_volumes: bool = Query(True, description="是否計算單次成交量"),
     service: TWStockTickService = Depends(get_tick_service)
 ):
     """
     取得特定股票在特定日期的 tick 資料
     
     此端點允許用戶獲取指定股票在某一特定日期的所有 tick 資料。
-    用戶可以選擇是否將資料格式轉換為更易讀的形式。
+    用戶可以選擇是否將資料格式轉換為更易讀的形式，以及是否計算單次成交量。
     
     參數:
         stock_id: 股票代碼 (例如：'2330')
         date: 日期 (格式: 'YYYY-MM-DD', 'YYYY/MM/DD' 或 'YYYYMMDD')
         convert_formats: 是否轉換資料格式 (預設為 True)
+        calculate_volumes: 是否計算單次成交量 (預設為 True)
         service: TW股票Tick服務實例 (自動注入)
         
     返回:
@@ -190,6 +249,10 @@ async def get_tick_data_by_date(
                 df = custom_process_price_columns(df)
                 df = custom_process_volume_columns(df)
             
+            # 計算單次成交量
+            if calculate_volumes:
+                df = calculate_trade_volume(df)
+            
             # 轉換為字典列表
             records = df.to_dict('records')
             
@@ -207,6 +270,7 @@ async def get_tick_data_by_date(
             "stock_id": stock_id,
             "date": date,
             "convert_formats": convert_formats,
+            "calculate_volumes": calculate_volumes,
             "timestamp": datetime.now().isoformat()
         }
         
@@ -237,19 +301,21 @@ async def get_tick_data_by_range(
     start_date: str,
     end_date: str,
     convert_formats: bool = Query(True, description="是否轉換資料格式（日期、時間、價格）"),
+    calculate_volumes: bool = Query(True, description="是否計算單次成交量"),
     service: TWStockTickService = Depends(get_tick_service)
 ):
     """
     取得特定股票在日期範圍內的 tick 資料
     
     此端點允許用戶獲取指定股票在某個日期範圍內的所有 tick 資料。
-    用戶可以選擇是否將資料格式轉換為更易讀的形式。
+    用戶可以選擇是否將資料格式轉換為更易讀的形式，以及是否計算單次成交量。
     
     參數:
         stock_id: 股票代碼 (例如：'2330')
         start_date: 開始日期 (格式: 'YYYY-MM-DD', 'YYYY/MM/DD' 或 'YYYYMMDD')
         end_date: 結束日期 (格式同上)
         convert_formats: 是否轉換資料格式 (預設為 True)
+        calculate_volumes: 是否計算單次成交量 (預設為 True)
         service: TW股票Tick服務實例 (自動注入)
         
     返回:
@@ -278,6 +344,10 @@ async def get_tick_data_by_range(
                 df = custom_process_price_columns(df)
                 df = custom_process_volume_columns(df)
             
+            # 計算單次成交量
+            if calculate_volumes:
+                df = calculate_trade_volume(df)
+            
             # 轉換為字典列表
             records = df.to_dict('records')
             
@@ -296,6 +366,7 @@ async def get_tick_data_by_range(
             "start_date": start_date,
             "end_date": end_date,
             "convert_formats": convert_formats,
+            "calculate_volumes": calculate_volumes,
             "timestamp": datetime.now().isoformat()
         }
         

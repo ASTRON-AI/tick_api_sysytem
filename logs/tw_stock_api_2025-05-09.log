@@ -134,3 +134,26 @@
 2025-05-09 10:14:27,534 - tw_stock_api - INFO - [websocket.py:157] - 客戶端斷開連接，股票: 2330，日期: 20230426，進度: 5500/47493
 2025-05-09 10:14:27,535 - tw_stock_api - INFO - [websocket.py:167] - 完成WebSocket流，股票: 2330，日期: 20230426，總記錄數: 47493，用時: 723.13秒，速率: 65.68 條/秒
 2025-05-09 10:14:27,536 - tw_stock_api - ERROR - [websocket.py:180] - WebSocket連接錯誤: Cannot call "send" once a close message has been sent.
+2025-05-09 14:41:25,107 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-09 14:41:25,159 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-09 14:41:41,523 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-09 14:41:41,569 - tw_stock_api - INFO - [logging_config.py:66] - 日誌系統已初始化
+2025-05-09 14:41:53,332 - tw_stock_api - INFO - [tick_api.py:68] - TWStockTickService initialized with host=140.113.87.91, port=3000
+2025-05-09 14:41:53,334 - tw_stock_api - INFO - [tick_api.py:180] - Querying file: tw_orderbook_20230426.parquet
+2025-05-09 14:41:54,660 - tw_stock_api - INFO - [tick_api.py:185] - Retrieved 47493 records
+2025-05-09 14:41:56,686 - tw_stock_api - INFO - [tick_api.py:207] - Successfully retrieved a total of 47493 data records
+2025-05-09 14:41:58,153 - tw_stock_api - INFO - [tick_api.py:727] - 成功獲取股票 2330 在日期 20230426 的 47493 條數據記錄
+2025-05-09 14:41:58,224 - tw_stock_api - INFO - [websocket.py:127] - 開始為股票 2330 在 20230426 的WebSocket流，總記錄數: 47493
+2025-05-09 14:42:04,284 - tw_stock_api - INFO - [websocket.py:210] - 客戶端斷開連接，股票: 2330，日期: 20230426，進度: 7/47493
+2025-05-09 14:42:04,285 - tw_stock_api - INFO - [websocket.py:220] - 完成WebSocket流，股票: 2330，日期: 20230426，總記錄數: 47493，用時: 6.06秒，速率: 7838.16 條/秒
+2025-05-09 14:42:04,285 - tw_stock_api - ERROR - [websocket.py:233] - WebSocket連接錯誤: Cannot call "send" once a close message has been sent.
+2025-05-09 14:42:17,705 - tw_stock_api - INFO - [tick_api.py:180] - Querying file: tw_orderbook_20230426.parquet
+2025-05-09 14:42:18,986 - tw_stock_api - INFO - [tick_api.py:185] - Retrieved 47493 records
+2025-05-09 14:42:21,225 - tw_stock_api - INFO - [tick_api.py:207] - Successfully retrieved a total of 47493 data records
+2025-05-09 14:42:22,597 - tw_stock_api - INFO - [tick_api.py:727] - 成功獲取股票 2330 在日期 20230426 的 47493 條數據記錄
+2025-05-09 14:42:22,658 - tw_stock_api - INFO - [websocket.py:127] - 開始為股票 2330 在 20230426 的WebSocket流，總記錄數: 47493
+2025-05-09 14:48:11,746 - tw_stock_api - INFO - [websocket.py:210] - 客戶端斷開連接，股票: 2330，日期: 20230426，進度: 553/47493
+2025-05-09 14:48:11,747 - tw_stock_api - INFO - [websocket.py:220] - 完成WebSocket流，股票: 2330，日期: 20230426，總記錄數: 47493，用時: 349.09秒，速率: 136.05 條/秒
+2025-05-09 14:48:11,747 - tw_stock_api - ERROR - [websocket.py:233] - WebSocket連接錯誤: Cannot call "send" once a close message has been sent.
+2025-05-09 14:50:27,952 - tw_stock_api - INFO - [tick_api.py:180] - Querying file: tw_orderbook_20241212.parquet
+2025-05-09 14:50:29,332 - tw_stock_api - INFO - [tick_api.py:185] - Retrieved 41719 records
